@@ -1,66 +1,200 @@
 <!DOCTYPE html>
-
-{% extends 'pages/base.html' %}
-{% load static %}
-{% block title %} Welcome to {{ provinces.name }}  {% endblock title %}
-{% block content %}
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'assets/css/provions.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <title>Xabar Yuborish</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            flex: 1 1 250px; /* Responsive flex item */
+        }
+        .icon-frame {
+            background-color: rgb(217, 35, 45); /* Button rangiga mos keladi */
+            border-radius: 5px; /* Burchaklarni yumshatish */
+            padding: 12px; /* Ichkaridagi bo'sh joy */
+            margin-right: 15px; /* Icon va matn orasidagi bo'sh joy */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px; /* Ramkaning kengligi */
+            height: 50px; /* Ramkaning balandligi */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Soyali effekt */
+        }
+        .icon-white {
+            color: white; /* Oq rang */
+            font-size: 24px; /* Icon o'lchami */
+        }
+        .info-item h3 {
+            font-size: 24px; /* Bosh sarlavha o'lchami */
+            color: rgb(50, 50, 50); /* Matnning rangi */
+            margin: 0; /* Bo'sh joylarni olib tashlash */
+            font-weight: bold; /* Matnni qalin qilish */
+            text-transform: uppercase; /* Harflarni katta qilish */
+            letter-spacing: 1px; /* Harflar orasida bo'sh joy qo'shish */
+        }
+        .info-item p {
+            color: rgba(50, 50, 50, 0.7); /* Xiralashtirilgan rang */
+            margin: 0; /* Bo'sh joylarni olib tashlash */
+            font-size: 14px; /* Matn o'lchami */
+            font-style: italic; /* Matnni italik qilish */
+            line-height: 1.5; /* Qator balandligini oshirish */
+        }
+        #response {
+            margin-top: 20px;
+            display: none;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .success {
+            color: green;
+            background-color: #d4edda;
+        }
+        .error {
+            color: red;
+            background-color: #f8d7da;
+        }
+        .btn-custom {
+            background-color: rgb(217, 35, 45);
+            color: white;
+            width: auto; /* Kichik o'lcham */
+            padding: 10px 20px; /* Kichik bo'sh joy */
+            border: none;
+            border-radius: 4px;
+            display: block; /* O'rtaga joylashtirish uchun */
+            margin: 0 auto; /* O'rtaga joylashtirish */
+        }
+        .btn-custom:hover {
+            background-color: darkred;
+        }
+        .form-control {
+            opacity: 0.7; /* Form ichidagi yozuvlarni yanada xiralashtirish */
+        }
+
+        /* Media Queries for responsive design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack items vertically on small screens */
+                padding: 20px;
+            }
+            .info-item {
+                margin-bottom: 15px;
+            }
+            .icon-frame {
+                width: 40px;
+                height: 40px;
+                padding: 8px;
+            }
+            .info-item h3 {
+                font-size: 20px;
+            }
+            .info-item p {
+                font-size: 12px;
+            }
+            .btn-custom {
+                padding: 8px 16px; /* Smaller button padding */
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="col-lg-4">
+            <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-frame">
+                    <i class="bi bi-geo-alt icon-white"></i>
+                </div>
+                <div>
+                    <h3>Address</h3>
+                    <p>Улица Доваторцев, 47 Ставрополь</p>
+                </div>
+            </div><!-- End Info Item -->
 
-    <div class="hero" id="hero">
-        <img src="{{ carusel.image_url }}" alt="Welcome to {{ provinces.name }}">
-        <h1>Welcome to {{ provinces.name }}</h1>
-    </div>
+            <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-frame">
+                    <i class="bi bi-telephone icon-white"></i>
+                </div>
+                <div>
+                    <h3>Call Us</h3>
+                    <p>+7 906 491 71 72</p>
+                </div>
+            </div><!-- End Info Item -->
 
-    <div class="content">
-        <div class="top-frames">
-            <div class="text-frame">
-                <h2>Discover Samarkand</h2>
-                <p>
-                    Explore the rich history and culture of Samarkand, a city known for its stunning architecture and vibrant markets.
-                </p>
-            </div>
-            <div class="text-frame">
-                <h2>Historical Sites</h2>
-                <p>
-                    Visit the Registan, Shah-i-Zinda, and other historical landmarks that tell the story of this ancient city.
-                </p>
-            </div>
-            <div class="text-frame">
-                <h2>Local Cuisine</h2>
-                <p>
-                    Experience the flavors of Samarkand with its unique dishes and traditional meals that delight the senses.
-                </p>
-            </div>
+            <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-frame">
+                    <i class="bi bi-envelope icon-white"></i>
+                </div>
+                <div>
+                    <h3>Email Us</h3>
+                    <p>xudoynazarovzufar12@gmail.com</p>
+                </div>
+            </div><!-- End Info Item -->
         </div>
 
-        <div class="bottom-frames">
-            <div class="text-frame">
-                <h2>Modern Attractions</h2>
-                <p>
-                    Enjoy the contemporary side of Samarkand with modern cafes and entertainment options that cater to all tastes.
-                </p>
-            </div>
-            <div class="text-frame">
-                <h2>Festivals and Events</h2>
-                <p>
-                    Participate in vibrant festivals that celebrate the traditions and culture of the people of Samarkand.
-                </p>
-            </div>
-            <div class="text-frame">
-                <h2>Guided Tours</h2>
-                <p>
-                    Join guided tours to explore Samarkand's hidden gems and learn more about its fascinating history.
-                </p>
-            </div>
+        <div class="col-lg-8">
+            <form id="messageForm">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name | Ваше Имя" required="">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email | Ваш адрес электронной почты" required="">
+                    </div>
+                </div>
+                <input type="text" class="form-control mb-3" name="subject" placeholder="Subject | Предмет" required="">
+                <textarea class="form-control mb-3" name="message" rows="6" placeholder="Message | Сообщение" required=""></textarea>
+
+                <div id="loading" class="loading" style="display: none;">Loading</div>
+                <div id="error-message" class="error-message" style="display: none;"></div>
+                <div id="sent-message" class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
+                <button type="submit" class="btn btn-custom">Send Message</button>
+            </form>
+            <div id="response"></div>
         </div>
     </div>
-<script src="{% static 'assets/js/provions.js' %}"></script>
+
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            fetch('/send_message/', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                const responseDiv = document.getElementById('response');
+                responseDiv.style.display = 'block';
+                responseDiv.className = data.status === 200 ? 'success' : 'error';
+                responseDiv.textContent = data.message;
+            });
+        });
+    </script>
 </body>
-
-{% endblock content %}
+</html>

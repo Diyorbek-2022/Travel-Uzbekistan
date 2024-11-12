@@ -69,30 +69,15 @@ class Contact_Page_View(TemplateView):
         }
         return render(requests, "pages/contact.html", context)
 
-    def post(self, requests, *args, **kwargs):
-        form = ContactForm(requests.POST)
-        if requests.method == "POST" and form.is_valid():
-            form.save()
-            context = {
-                "status_code": 200,
-                "message": "Your message has been sent successfully!"
-            }
-            return render(requests, "pages/contact.html", context, status=200)
-
-        # Form is invalid
-        context = {
-            "status_code": 400,
-            "error": "Please fill out all fields correctly!"
-        }
-        return render(requests, "pages/contact.html", context, status=400)
-
-    def delete(self, requests, *args, **kwargs):
-        if requests.method == "DELETE":
-            return JsonResponse({'error': 'Only POST method is allowed'}, status=405)
-
-    def put(self, requests, *args, **kwargs):
-        if requests.method == "PUT":
-            return JsonResponse({'error': 'Only POST method is allowed'}, status=405)
+    def post(self, request, *args, **kwargs):
+        if request.method == 'POST':
+            form = ContactForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return JsonResponse({'status': 200, 'message': 'Ваше сообщение успешно отправлено.'})
+            else:
+                return JsonResponse(
+                    {'status': 400, 'message': 'В вашей отправке произошла ошибка.'})
 
 
 class Info_Page_View(TemplateView):
