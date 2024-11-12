@@ -1,3 +1,4 @@
 .idel
 Pipfile
 Pipfile.lock
+.env

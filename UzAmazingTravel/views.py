@@ -73,8 +73,18 @@ class Contact_Page_View(TemplateView):
         form = ContactForm(requests.POST)
         if requests.method == "POST" and form.is_valid():
             form.save()
-            return JsonResponse({'message': 'Your message has been sent successfully!'}, status=200)
-        return JsonResponse({'error': 'Barcha maydonlarni to\'ldiring!'}, status=400)
+            context = {
+                "status_code": 200,
+                "message": "Your message has been sent successfully!"
+            }
+            return render(requests, "pages/contact.html", context, status=200)
+
+        # Form is invalid
+        context = {
+            "status_code": 400,
+            "error": "Please fill out all fields correctly!"
+        }
+        return render(requests, "pages/contact.html", context, status=400)
 
     def delete(self, requests, *args, **kwargs):
         if requests.method == "DELETE":

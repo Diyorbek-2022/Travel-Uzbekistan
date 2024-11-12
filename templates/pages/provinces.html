@@ -4,63 +4,58 @@
 {% load static %}
 {% block title %} Welcome to {{ provinces.name }}  {% endblock title %}
 {% block content %}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'assets/css/provions.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-</head>
+
 <body>
 
-    <div class="hero" id="hero">
-        <img src="{{ carusel.image_url }}" alt="Welcome to {{ provinces.name }}">
-        <h1>Welcome to {{ provinces.name }}</h1>
-    </div>
+<div class="hero" id="hero">
+    <img src="{{ carusel.image_url }}" alt="Welcome to {{ provinces.name }}">
+    <h1>Welcome to {{ provinces.name }}</h1>
+</div>
 
-    <div class="content">
-        <div class="top-frames">
-            <div class="text-frame">
-                <h2>История</h2>
-                <p>
-                    {{ provinces.story }}
-                </p>
-            </div>
-            <div class="text-frame">
-                <h2>География</h2>
-                <p>
-                    {{ provinces.geography }}
-                </p>
-            </div>
-            <div class="text-frame">
-                <h2>Культура и традиции</h2>
-                <p>
-                    {{ provinces.culture_and_traditions }}
-                </p>
-            </div>
+<div class="content">
+    <div class="top-frames">
+        <div class="text-frame">
+            <h2>История</h2>
+            <p>
+                {{ provinces.story }}
+            </p>
         </div>
-
-        <div class="bottom-frames">
-            <div class="text-frame">
-                <h2>Экономика</h2>
-                <p>
-                    {{ provinces.economy }}
-                </p>
-            </div>
-            <div class="text-frame">
-                <h2>Природа</h2>
-                <p>
-                    {{ provinces.nature }}
-                </p>
-            </div>
-            <div class="text-frame">
-                <h2>Население</h2>
-                <p>
-                    {{ provinces.population }}
-                </p>
-            </div>
+        <div class="text-frame">
+            <h2>География</h2>
+            <p>
+                {{ provinces.geography }}
+            </p>
+        </div>
+        <div class="text-frame">
+            <h2>Культура и традиции</h2>
+            <p>
+                {{ provinces.culture_and_traditions }}
+            </p>
         </div>
     </div>
-<script src="{% static 'assets/js/provions.js' %}"></script>
+
+    <div class="bottom-frames">
+        <div class="text-frame">
+            <h2>Экономика</h2>
+            <p>
+                {{ provinces.economy }}
+            </p>
+        </div>
+        <div class="text-frame">
+            <h2>Природа</h2>
+            <p>
+                {{ provinces.nature }}
+            </p>
+        </div>
+        <div class="text-frame">
+            <h2>Население</h2>
+            <p>
+                {{ provinces.population }}
+            </p>
+        </div>
+    </div>
+</div>
+
 </body>
 
 {% endblock content %}
