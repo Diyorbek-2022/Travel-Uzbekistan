@@ -1,0 +1,204 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %} О Нас  {% endblock title %}
+{% block content %}
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">О Нас</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="{% url 'home_page' %}">Дом</a></li>
+                    <li class="current">о вас</li>
+                </ol>
+            </nav>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- About 2 Section -->
+    <section id="about-2" class="about-2 section">
+
+        <div class="container" data-aos="fade-up">
+
+            <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="col-lg-5">
+                    <div class="about-img">
+                        <img src="{% static 'assets/images/me.jpg' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <h3 class="pt-0 pt-lg-5">СЕО Компании</h3>
+
+                    <!-- Tabs -->
+                    <ul class="nav nav-pills mb-3">
+                        <li><a class="nav-link active" data-bs-toggle="pill" href="#about-2-tab1">Главный директор</a>
+                        </li>
+
+                    </ul><!-- End Tabs -->
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+
+                        <div class="tab-pane fade show active" id="about-2-tab1">
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="bi bi-check2"></i>
+                                <h4>ФИО</h4>
+                            </div>
+                            <p style="font-size: 40px;">Худайназаров Зуфар Зафар Угли</p>
+
+                            <p class="fst-italic">Уважайте свои мечты и будьте им верны. Умение мечтать — одна из
+                                величайших способностей человека. Мечты поддерживают стремление и энтузиазм, вдохновляют
+                                на новые начинания, приводят к переменам и двигают мир вперёд. Мы все должны мечтать и
+                                вдохновлять на это других. Без мечтаний не было бы искусства, приключений, высадки на
+                                Луну, женщин-лидеров и прав человека.</p>
+
+                            <br>
+                            <br>
+
+
+                        </div><!-- End Tab 1 Content -->
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section><!-- /About 2 Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item text-center w-100 h-100">
+                        <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                              class="purecounter"></span>
+                        <p>Клиенты</p>
+                    </div>
+                </div><!-- End Stats Item -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item text-center w-100 h-100">
+                        <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                              class="purecounter"></span>
+                        <p>Проекты</p>
+                    </div>
+                </div><!-- End Stats Item -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item text-center w-100 h-100">
+                        <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
+                              class="purecounter"></span>
+                        <p>Часы поддержки</p>
+                    </div>
+                </div><!-- End Stats Item -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item text-center w-100 h-100">
+                        <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
+                              class="purecounter"></span>
+                        <p>Рабочие</p>
+                    </div>
+                </div><!-- End Stats Item -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-member d-flex align-items-start">
+                        <div class="pic"><img src="{% static 'assets/images/team/team-1.jpg' %}" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Якубов Джурабек</h4>
+                            <span>Директор компании</span>
+                            <p>Я объясню удовольствие от гибкости и отталкиваю боль, как будто</p>
+                            <div class="social">
+                                <a href=""> <i class="bi bi-telegram"></i> </a>
+                                <a href=""><i class="bi bi-twitter-x"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-member d-flex align-items-start">
+                        <div class="pic"><img src="{% static 'assets/images/team/team-2.jpg' %}" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Утамуродов Диёрбек</h4>
+                            <span>Менеджер по продукту</span>
+                            <p>Либо он полюбит большие удовольствия, а кто подготовит к отправке нынешние</p>
+                            <div class="social">
+                                <a href=""> <i class="bi bi-telegram"></i> </a>
+                                <a href=""><i class="bi bi-twitter-x"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-member d-flex align-items-start">
+                        <div class="pic"><img src="{% static 'assets/images/team/team-3.jpg' %}" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Ботиров Хасан</h4>
+                            <span>Технический директор</span>
+                            <p>Любой человек легко убежит от того, что испорчено, когда он хочет работать.</p>
+                            <div class="social">
+                                <a href=""> <i class="bi bi-telegram"></i> </a>
+                                <a href=""><i class="bi bi-twitter-x"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-member d-flex align-items-start">
+                        <div class="pic"><img src="{% static 'assets/images/team/team-4.jpg' %}" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Аманда Джепсон</h4>
+                            <span>Бухгалтер</span>
+                            <p>Он ненавидит времена боли, обязанности обязанностей, и мы обвиняем его</p>
+                            <div class="social">
+                                <a href=""> <i class="bi bi-telegram"></i> </a>
+                                <a href=""><i class="bi bi-twitter-x"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+            </div>
+
+        </div>
+
+    </section><!-- Team Section -->
+
+
+</main>
+{% endblock content %}

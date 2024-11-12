@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %} Welcome to {{ provinces.name }}  {% endblock title %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/provions.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="hero" id="hero">
+        <img src="{{ carusel.image_url }}" alt="Welcome to {{ provinces.name }}">
+        <h1>Welcome to {{ provinces.name }}</h1>
+    </div>
+
+    <div class="content">
+        <div class="top-frames">
+            <div class="text-frame">
+                <h2>Discover Samarkand</h2>
+                <p>
+                    Explore the rich history and culture of Samarkand, a city known for its stunning architecture and vibrant markets.
+                </p>
+            </div>
+            <div class="text-frame">
+                <h2>Historical Sites</h2>
+                <p>
+                    Visit the Registan, Shah-i-Zinda, and other historical landmarks that tell the story of this ancient city.
+                </p>
+            </div>
+            <div class="text-frame">
+                <h2>Local Cuisine</h2>
+                <p>
+                    Experience the flavors of Samarkand with its unique dishes and traditional meals that delight the senses.
+                </p>
+            </div>
+        </div>
+
+        <div class="bottom-frames">
+            <div class="text-frame">
+                <h2>Modern Attractions</h2>
+                <p>
+                    Enjoy the contemporary side of Samarkand with modern cafes and entertainment options that cater to all tastes.
+                </p>
+            </div>
+            <div class="text-frame">
+                <h2>Festivals and Events</h2>
+                <p>
+                    Participate in vibrant festivals that celebrate the traditions and culture of the people of Samarkand.
+                </p>
+            </div>
+            <div class="text-frame">
+                <h2>Guided Tours</h2>
+                <p>
+                    Join guided tours to explore Samarkand's hidden gems and learn more about its fascinating history.
+                </p>
+            </div>
+        </div>
+    </div>
+<script src="{% static 'assets/js/provions.js' %}"></script>
+</body>
+
+{% endblock content %}

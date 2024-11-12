@@ -1,0 +1,215 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %} Bosh sahifa  {% endblock title %}
+{% block content %}
+
+<main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+        <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+            <div class="carousel-item active">
+                <img src="{% static 'assets/images/buk.jpg' %}" alt="">
+                <div class="carousel-container">
+                    <h2 class="home_h2">Добро пожаловать в Узбекистан<br></h2>
+                    <p>Откройте для себяУзбекистан - это загадочная страна Востока, где истории городов собирались в
+                        легенды, где круглый год светит солнце и отражением этому - уникальная природа и красивые
+                        сердцем люди.</p>
+                    <a href="{% url 'sign' %}" class="btn-get-started">Начать</a>
+                </div>
+            </div><!-- End Carousel Item -->
+
+            <div class="carousel-item">
+                <img src="{% static 'assets/images/samarkand1.jpg' %}" alt="">
+                <div class="carousel-container">
+                    <h2> Самарканд</h2>
+                    <p>В Самарканде гармонично уживаются древность и современность. Удивительный симбиоз обеспечивает
+                        многовековому городу оригинальный стиль и делает его образ особенно притягательным для туристов.
+                        Предлагаем отправиться в туристическую столицу Узбекистана на модную охоту.</p>
+                    <a href="{% url 'sign' %}" class="btn-get-started">Начать</a>
+                </div>
+            </div><!-- End Carousel Item -->
+
+            <div class="carousel-item">
+                <img src="{% static 'assets/images/tashkent.jpg' %}" alt="">
+                <div class="carousel-container">
+                    <h2>Ташкент</h2>
+                    <p>Главный город Узбекистана рассказывает миру свою увлекательную историю уже более 2000 лет. Столь
+                        почтенный возраст при этом не мешает Ташкенту бодро шагать в ногу со временем, даря туристам не
+                        только умиротворенную атмосферу древности, но и задор современности. Собрали ориентиры по
+                        локациям для тех, кто едет в узбекскую столицу за нестандартными впечатлениями.</p>
+                    <a href="{% url 'sign' %}" class="btn-get-started">Начать</a>
+                </div>
+            </div><!-- End Carousel Item -->
+
+            <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+            </a>
+
+            <ol class="carousel-indicators"></ol>
+
+        </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+
+    <!-- /About Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+
+        <div class="container" data-aos="fade-up">
+
+            <div class="row gy-4">
+
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                    <img src="{% static 'assets/images/clients/client-1.png' %}" class="img-fluid" alt="">
+                </div><!-- End Client Item -->
+
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                    <img src="{% static 'assets/images/clients/client-2.png' %}" class="img-fluid" alt="">
+                </div><!-- End Client Item -->
+
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                    <img src="{% static 'assets/images/clients/client-3.png' %}" class="img-fluid" alt="">
+                </div><!-- End Client Item -->
+
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                    <img src="{% static 'assets/images/clients/client-4.png' %}" class="img-fluid" alt="">
+                </div><!-- End Client Item -->
+
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                    <img src="{% static 'assets/images/clients/client-5.png' %}" class="img-fluid" alt="">
+                </div><!-- End Client Item -->
+
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                    <img src="{% static 'assets/images/clients/client-6.png' %}" class="img-fluid" alt="">
+                </div><!-- End Client Item -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item d-flex position-relative h-100">
+                        <i class="bi bi-people icon flex-shrink-0"></i>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link">ГИДЫ</a></h4>
+                            <p class="description">К подбору гидов мы подходим с особой тщательностью. Все наши гиды
+                                являются высококвалифицированными специалистами в своем деле, получают хорошие отзывы и
+                                высокие оценки от наших туристов</p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item d-flex position-relative h-100">
+                        <i class="bi bi-car-front icon flex-shrink-0"></i>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link">Транспортные услуги</a></h4>
+                            <p class="description">Все перевозки в Узбекистане лицензируются и сертифицируются
+                                государственными ведомствами с очень строгим контролем.
+                                Весь транспорт в туризме новый, надежный и комфортабельный.
+                                Средний возраст автобусов и автомобилей – 3 года.</p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-item d-flex position-relative h-100">
+                        <i class="bi bi-house-door icon flex-shrink-0"></i>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link"> Гостиницы </a></h4>
+                            <p class="description">В Узбекистане гостиницы предлагают различные уровни сервиса, включая
+                                сети международного уровня и местные места размещения.</p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-item d-flex position-relative h-100">
+                        <i class="bi bi-bank icon flex-shrink-0"></i>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link">Банк</a></h4>
+                            <p class="description">Банковская система Узбекистана состоит из Центрального банка,
+                                коммерческих и государственных банков, которые предоставляют кредиты, депозиты и
+                                финансовые услуги населению.</p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item d-flex position-relative h-100">
+                        <i class="bi bi-shield-check icon flex-shrink-0"></i>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link">Безопасность</a></h4>
+                            <p class="description">В городах и достопримечательностях, где много туристов,
+                                дополнительные полицейские патрулируют территорию</p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item d-flex position-relative h-100">
+                        <i class="bi bi-file-earmark-medical icon flex-shrink-0"></i>
+                        <div>
+                            <h4 class="title"><a href="#" class="stretched-link">Страхование</a></h4>
+                            <p class="description">Страхование путешествий может помочь вам возместить до 100% расходов
+                                на поездку в случае покрываемых убытков, таких как болезнь, отмена поездки, задержки и
+                                т. д.</p>
+                        </div>
+                    </div>
+                </div><!-- End Service Item -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Portfolio Section -->
+    <div class="body_for">
+        <div class="carousel_1">
+
+            <div class="carousel-control-button_1 left"><input type="radio" name="carousel-control-input_1"></div>
+            <div class="carousel-control-button_1 right"><input type="radio" name="carousel-control-input_1" checked>
+            </div>
+
+            <div class="carousel-rotation-direction_1">
+                <ul class="carousel-item-wrapper_1" style="--_num-elements: 11">
+                    {% if carusel %}
+                    {% for image in carusel %}
+                    <li class="carousel-item_1"
+                        style="--_index: {{ forloop.counter }}; --_image-url: url('{{ image.image_url }}')">
+                        <a href="{% url 'info' image.cl_id %}" target="_blank">Architecture Example {{ forloop.counter }}</a></li>
+                    {% endfor %}
+                    {% endif %}
+                    <li class="carousel-ground_1"></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- /Portfolio Section -->
+
+</main>
+{% endblock content %}

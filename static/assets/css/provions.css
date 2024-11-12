@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: 'Libre Baskerville', serif; /* More elegant font for content */
+    background-color: #f4f4f4; /* Light background for contrast */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s ease, filter 1s ease; /* Changed from opacity to filter */
+}
+
+.hero h1 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-size:cover;
+    background-position: center;
+    position: absolute; /* Use absolute positioning */
+    font-size: 5vw; /* Font size based on viewport width */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Great Vibes', cursive; /* Elegant calligraphy font */
+    z-index: 1;
+    text-align: center; /* Center the text */
+    margin: 0; /* Remove margin */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for text size */
+}
+
+
+.content {
+    padding: 10px; /* Reduced padding to bring the frame closer */
+    text-align: center; /* Center the content text */
+}
+
+.text-frame {
+    background-color: rgb(217, 35, 45); /* Red frame color */
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px; /* Maximum width for each frame */
+    margin: 20px; /* Margin around each frame */
+    color: white; /* White text color */
+    position: relative;
+    z-index: 2; /* Ensure frame is above the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.text-frame:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg); /* 3D effect on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Add shadow for depth */
+}
+
+.text-frame h2 {
+    font-size: 1.5em; /* Adjusted for better visibility */
+    color: white; /* White text color */
+    margin-bottom: 10px; /* Space below the title */
+    text-align: center; /* Center title in frame */
+}
+
+.text-frame p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: white; /* White text color */
+    text-align: justify; /* Justified text for better readability */
+}
+
+.top-frames, .bottom-frames {
+    display: flex;
+    justify-content: center; /* Center the frames */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 5vw; /* Smaller font size for mobile */
+    }
+    .text-frame {
+        max-width: 90%; /* Full width on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 7vw; /* Even smaller font size for very small screens */
+    }
+}

@@ -1,0 +1,198 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block title %} Услуги  {% endblock title %}
+{% block content %}
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="conбta iner d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Услуги</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'home_page' %}">Дом</a></li>
+            <li class="current">Услуги</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-people icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">ГИДЫ</a></h4>
+                <p class="description">К подбору гидов мы подходим с особой тщательностью. Все наши гиды являются высококвалифицированными специалистами в своем деле, получают хорошие отзывы и высокие оценки от наших туристов</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-car-front icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Транспортные услуги</a></h4>
+                <p class="description">Все перевозки в Узбекистане лицензируются и сертифицируются государственными ведомствами с очень строгим контролем. 
+                  Весь транспорт в туризме новый, надежный и комфортабельный. 
+                  Средний возраст автобусов и автомобилей – 3 года.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-house-door icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link"> Гостиницы </a></h4>
+                <p class="description">В Узбекистане гостиницы предлагают различные уровни сервиса, включая сети международного уровня и местные места размещения.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-bank icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Банк</a></h4>
+                <p class="description">Банковская система Узбекистана состоит из Центрального банка, коммерческих и государственных банков, которые предоставляют кредиты, депозиты и финансовые услуги населению.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-shield-check icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Безопасность</a></h4>
+                <p class="description">В городах и достопримечательностях, где много туристов, дополнительные полицейские патрулируют территорию</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-file-earmark-medical icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Страхование</a></h4>
+                <p class="description">Страхование путешествий может помочь вам возместить до 100% расходов на поездку в случае покрываемых убытков, таких как болезнь, отмена поездки, задержки и т. д.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Функции</h2>
+        <p>Проверьте наши возможности<br></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#features-tab-1">Моди сидит</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#features-tab-2">Откуда настоящее, но</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#features-tab-3">Я тебе это тоже объясню</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#features-tab-4">У нас такое</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#features-tab-5">Так же удобно или</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="features-tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Но позвольте мне открыть это архитектору</h3>
+                    <p class="fst-italic">Тот, кто имеет достойные похвалы результаты своего труда, должен быть тем</p>
+                    <p>А к нам его предки. Для удовольствий, как и для лести и прочего. Она ненавидит эти самые задачи. Они происходят здесь как беда или кто. Его отталкивает малейшая вещь, а кто-то ничего большого. Пусть он ищет страданий, которые следуют от тех, кто обвиняет нас в подобном</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/images/tabs/tab-1.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="features-tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>И никто не примет истину лестью</h3>
+                    <p class="fst-italic">Тот, кто достоин похвалы за свои труды, должен быть мудрым</p>
+                    <p>Она достигнет того самого удовольствия от того, кто она есть. Эта ошибка все потому, что они должны быть отвергнуты. Поэтому мы обвиняем его в том, что он не хочет, чтобы что-то отталкивалось, и он хочет самих удовольствий. Они не знают выбора, и мы обвиняем их в том, что они благословлены.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/images/tabs/tab-2.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="features-tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Легко быть ослепленным ненавистью и не открыться</h3>
+                    <p class="fst-italic">Какие удовольствия они Я ненавижу таких, как он, потому что это не бегство. Тех, кто не родился, называют болью и. В более грубых случаях он хочет попытаться вытерпеть или</p>
+                    <p>Он ненавидит права вещей. В том, что кто-то следует за ним, виновата испорченная истина. И не потребности вещей сделали его таким. Мне приятно малейшее неудобство, но трудолюбиво от этой ненависти. Он их ненавидит, они не знают, как убежать. И выбор этих удовольствий</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/images/tabs/tab-3.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="features-tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Чтобы избежать боли, связанной с поиском трудоемких вещей, мы обвиняем их в мучительной боли.</h3>
+                    <p class="fst-italic">Мы заряжаем все открытие. Он отталкивает последствия истинного удовольствия и правильно выбирает, кого избрать.</p>
+                    <p>И эти результаты являются результатами свободного способа получения удовольствия. Тот, кто хочет убежать от собственных нужд и долгов. Это результат самой большой ошибки в организме и. Я выберу более суровых, но тех, кто открывает правду, потому что они изобретатели трудностей.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/images/tabs/tab-4.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="features-tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Бывает, что та самая шлакоблока</h3>
+                    <p class="fst-italic">Но я часто льщу тем, кто в долгах.</p>
+                    <p>Все наши тренировки. Меньше отвергать отказы. Все отказы делать не как делать, что его кто. Потому что он действительно ненавидит его и любит некоторых людей. Но либо они ослеплены радостями жизни, либо жизненными неприятностями.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/images/tabs/tab-5.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+  </main>
+{% endblock content %}
