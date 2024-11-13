@@ -14,6 +14,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+SECURE_SSL_REDIRECT = True  # Agar HTTPS majburiy bo'lsa
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+CORS_ORIGIN_ALLOW_ALL = True
+
 INSTALLED_APPS = [
     'jazzmin',
     'django.contrib.admin',
@@ -25,9 +30,10 @@ INSTALLED_APPS = [
     # Packages
     'whitenoise',
     'environs',
-    'corsheaders',
     # LocalApps
     'UzAmazingTravel',
+    #############
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -36,7 +42,9 @@ MIDDLEWARE = [
     ##############
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    ########
     "corsheaders.middleware.CorsMiddleware",
+    ########
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     # corsheaders #
@@ -101,11 +109,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
 MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_URL)
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_FINDER = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -117,7 +124,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 WHITENOISE_MAX_AGE = 31536000  # Bu 1 yil (sekundlarda) davomida keshlashni belgilaydi
 WHITENOISE_USE_FINDERS = True  # Agar siz fayl finderlari orqali statik fayllarni boshqarsangiz
-
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
@@ -279,4 +285,23 @@ JAZZMIN_UI_TWEAKS = {
         "danger": "btn-outline-danger",
         "success": "btn-outline-success"
     }
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': 'error.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
 }
