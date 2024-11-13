@@ -8,7 +8,6 @@ from .models import Carusel, Provinces
 
 def home(req):
     carusel = Carusel.objects.all()[:12]
-    # print(carusel)
     context = {"carusel": carusel}
     return render(req, 'pages/index.html', context)
 
@@ -95,10 +94,6 @@ class TestPage(TemplateView):
     template_name = "pages/test.html"
 
     def get(self, request, *args, **kwargs):
-        # slug1 = "70b16f33-a68b-4256-a896-59da8b1e5015"
-        # carusel = get_object_or_404(Carusel, cl_id=slug1)
-        # carusel = get_object_or_404(Carusel, cl_id=carusel.provinces.u_id)
-        # context = {"carusel": carusel}
         return render(request, "pages/test.html", {})
 
 
@@ -106,6 +101,5 @@ def test1(req):
     slug1 = "70b16f33-a68b-4256-a896-59da8b1e5015"
     carusel = get_object_or_404(Carusel, cl_id=slug1)
     provinces = get_object_or_404(Provinces, u_id=carusel.provinces.u_id)
-    print(carusel)
     context = {"carusel": carusel}
     return render(req, 'pages/test.html', context)
